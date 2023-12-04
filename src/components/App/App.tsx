@@ -1,9 +1,14 @@
 import "./App.css";
-import BurgerMenu from "../burgerMenu/burgerMenu";
-import TaskArea from "../taskArea/taskArea";
+import Navbar from "../Navbar/Navbar";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div className="">
+        <Navbar />
+      </div>
+    </>
+  );
 }
 
 export default App;
