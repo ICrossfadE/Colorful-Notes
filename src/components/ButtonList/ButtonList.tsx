@@ -1,4 +1,4 @@
-function ButtonList() {
+const ButtonList: React.FC = () => {
   //   const style = {
   //     backgroundColor: item.color,
   //   };
@@ -12,6 +12,6 @@ function ButtonList() {
       <button className="h-4 w-4 my-2 rounded-full bg-rose-500"></button>
     </>
   );
-}
+};
 
 export default ButtonList;

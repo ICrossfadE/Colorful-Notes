@@ -1,6 +1,6 @@
 import ButtonList from "../ButtonList/ButtonList";
 
-function Navbar() {
+const Navbar: React.FC = () => {
   return (
     <div className="flex flex-col items-center gap-y-5 py-2 h-screen w-20 border-r bg-zinc-900">
       <div className="flex flex-col justify-center w-12 h-12 text-center text-rose-500 rounded-xl bg-zinc-100">
@@ -12,6 +12,6 @@ function Navbar() {
       <ButtonList />
     </div>
   );
-}
+};
 
 export default Navbar;
