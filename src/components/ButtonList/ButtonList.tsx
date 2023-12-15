@@ -1,17 +1,17 @@
-const ButtonList: React.FC = () => {
-  //   const style = {
-  //     backgroundColor: item.color,
-  //   };
+import ColorfulButton from "../ColorfulButton/ColorfulButton";
+import { CategoryButton } from "../../../types";
+import { store } from "../../state/store";
 
-  return (
-    <>
-      <button className="h-4 w-4 my-2 rounded-full bg-orange-500"></button>
-      <button className="h-4 w-4 my-2 rounded-full bg-lime-500"></button>
-      <button className="h-4 w-4 my-2 rounded-full bg-sky-500"></button>
-      <button className="h-4 w-4 my-2 rounded-full bg-purple-500"></button>
-      <button className="h-4 w-4 my-2 rounded-full bg-rose-500"></button>
-    </>
-  );
+type ButtonListProps = {
+  item?: CategoryButton[];
+};
+
+const ButtonList: React.FC<ButtonListProps> = () => {
+  const buttonsCreate = store.categoryList.map((categoryItem) => {
+    return <ColorfulButton key={categoryItem.id} item={categoryItem} />;
+  });
+
+  return <>{buttonsCreate}</>;
 };
 
 export default ButtonList;

@@ -9,3 +9,8 @@ export interface Tasks {
   textContent: string;
   color: string;
 }
+
+export interface ColorStyleButton {
+  backgroundColor: string;
+  transition?: string;
+}
